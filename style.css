@@ -2,6 +2,12 @@ body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #DCEDC8 !important;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 form {
     display: flex;
@@ -13,8 +19,14 @@ form {
     justify-content: center;
 }
 .buttons {
-    display: flex;
-    justify-content: center;
+    text-align: center;
+}
+.btn {
+    padding: 8px;
+    color: white !important;
+}
+label {
+    color: #261714;
 }
 #listContainer {
     padding: 10px;
@@ -27,11 +39,25 @@ table {
     padding: 8px;
 }
 nav {
-    background-color: black;
+    background-color: #261714;
     text-align: center;
 }
 h4 {
     margin: 0;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 10px 10px 10px;
     color: white;
 }
+h3 {
+    text-align: center;
+}
+td {
+    display: flex;
+    flex-flow: column wrap;
+}
+.footer {
+    text-align: center;
+    color: #261714;
+    font-weight: 600;
+    margin: 10px;
+}
+

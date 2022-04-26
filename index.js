@@ -39,22 +39,21 @@ function agregar() {
                     var celda = document.createElement("td");
                     var celda2 = document.createElement("td");
                     var celda3 = document.createElement("td");
-                    var textoCelda0 = document.createTextNode(`${[i]})`);
-                    var textoCelda = document.createTextNode(`PRODUCTO: ${valueProducto}`);
-                    var textoCelda2 = document.createTextNode(`CANTIDAD: ${valueCantidad}`);
-                    var textoCelda3 = document.createTextNode("$"+valuePrecio);
-                    celda0.appendChild(textoCelda0);
+                    // var textoCelda0 = document.createTextNode(`${[i]})`);
+                    var textoCelda = document.createTextNode(`${[i]}) Producto: ${valueProducto}`);
+                    var textoCelda2 = document.createTextNode(`Cantidad: ${valueCantidad}`);
+                    var textoCelda3 = document.createTextNode(`El precio es: $`+valuePrecio);
+                    // celda0.appendChild(textoCelda0);
                     celda.appendChild(textoCelda);
                     celda2.appendChild(textoCelda2);
                     celda3.appendChild(textoCelda3);
-                    hilera.appendChild(celda0);
+                    // hilera.appendChild(celda0);
                     hilera.appendChild(celda);
                     hilera.appendChild(celda2);
                     hilera.appendChild(celda3);
                 }
-                
-                tblBody.appendChild(hilera);
-                
+
+                tblBody.appendChild(hilera);                
                 tabla.appendChild(tblBody);
                 body.appendChild(tabla)
                 
@@ -67,14 +66,12 @@ function agregar() {
             }
             
             function iva() {
-                if (auxPrecio != 0) {
+                if (auxPrecio !== 0 && auxPrecio !== NaN) {
                     let calculoIva = parseInt(auxPrecio * 0.3);
                     let totalIva = calculoIva + auxPrecio;
-                console.log(totalIva);
                 containerPrecioIva.innerHTML = `<h3>TOTAL A PAGAR CON IVA: $${totalIva}</h3>`;
                 }
         }
-        
         function bolsas() {
             // Aprox 4 productos por bolsa
             if (auxCantidad <= 4) {
